@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Поддержка — EchoDub</title>
+    <meta
+      name="description"
+      content="Поддержка EchoDub — демо, TestFlight, баги и вопросы по разрешениям."
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon-128.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=5" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("echodub-lang");
+        var lang =
+          saved === "en" || saved === "ru"
+            ? saved
+            : (navigator.language || "").toLowerCase().indexOf("en") === 0
+              ? "en"
+              : "ru";
+        document.documentElement.lang = lang;
+        document.documentElement.dataset.lang = lang;
+      })();
+    </script>
+  </head>
+  <body class="page-support">
+    <a class="skip-link" href="#content" data-i18n="nav.skip">К содержанию</a>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand-mark" href="index.html" aria-label="EchoDub" data-i18n-aria="nav.home">
+        <img src="assets/favicon-128.png" alt="" width="28" height="28" />
+        <span>EchoDub</span>
+      </a>
+      <div class="header-right">
+        <nav class="nav">
+          <a href="index.html#problem" data-i18n="nav.problem">Проблема</a>
+          <a href="index.html#product" data-i18n="nav.product">Продукт</a>
+          <a href="support.html" aria-current="page" data-i18n="support.nav">Поддержка</a>
+          <a class="nav-cta" href="index.html#invest" data-i18n="nav.cta">Написать</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Язык" data-i18n-aria="nav.lang">
+          <button type="button" data-set-lang="ru">RU</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="content" class="support-main">
+      <div class="support-intro">
+        <p class="support-eyebrow" data-i18n="support.eyebrow">Поддержка</p>
+        <h1 data-i18n="support.h1">Нужна помощь с EchoDub?</h1>
+        <p data-i18n="support.p">
+          Демо, TestFlight, баги или вопросы про микрофон — заполните форму, и мы ответим.
+        </p>
+      </div>
+
+      <div id="sent" class="support-toast" hidden data-i18n="support.sent">
+        Заявка отправлена. Ответим на почту, которую вы указали.
+      </div>
+
+      <form
+        class="support-form"
+        action="https://formsubmit.co/ilyandreev771@gmail.com"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="EchoDub — заявка" />
+        <input type="hidden" name="_next" data-support-next value="support.html?sent=1" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input
+          type="text"
+          name="_honey"
+          class="support-honey"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        />
+
+        <label>
+          <span data-i18n="support.name">Имя</span>
+          <input
+            type="text"
+            name="name"
+            autocomplete="name"
+            data-i18n-placeholder="support.name.ph"
+            placeholder="Как к вам обращаться"
+          />
+        </label>
+
+        <label>
+          <span data-i18n="support.mail">Почта</span>
+          <input
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+            data-i18n-placeholder="support.mail.ph"
+            placeholder="you@example.com"
+          />
+        </label>
+
+        <label>
+          <span data-i18n="support.topic">Тема</span>
+          <select name="topic" required>
+            <option value="" disabled selected data-i18n="support.topic.ph">Выберите тему</option>
+            <option value="demo" data-i18n="support.topic.demo">Демо / инвесторы</option>
+            <option value="testflight" data-i18n="support.topic.testflight">TestFlight</option>
+            <option value="bug" data-i18n="support.topic.bug">Баг</option>
+            <option value="permissions" data-i18n="support.topic.permissions">Микрофон и речь</option>
+            <option value="other" data-i18n="support.topic.other">Другое</option>
+          </select>
+        </label>
+
+        <label>
+          <span data-i18n="support.message">Сообщение</span>
+          <textarea
+            name="message"
+            required
+            rows="6"
+            data-i18n-placeholder="support.message.ph"
+            placeholder="Что случилось? Версия iOS и шаги воспроизведения помогают."
+          ></textarea>
+        </label>
+
+        <button class="btn btn-primary" type="submit" data-i18n="support.submit">Отправить заявку</button>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 EchoDub</span>
+      <span
+        ><a href="support.html" data-i18n="footer.support">Поддержка</a>
+        ·
+        <a href="privacy.html" data-i18n="footer.privacy">Конфиденциальность</a>
+        ·
+        <span data-i18n="footer.made">Сделано в</span>
+        <a
+          href="https://however-digital.tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          >however-digital.tech</a
+        ></span
+      >
+    </footer>
+    <script src="script.js?v=6"></script>
+  </body>
+</html>

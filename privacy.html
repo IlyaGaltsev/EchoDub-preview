@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Конфиденциальность — EchoDub</title>
+    <meta
+      name="description"
+      content="Политика конфиденциальности EchoDub. Записи остаются на iPhone, пока вы сами ими не поделитесь."
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon-128.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=5" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("echodub-lang");
+        var lang =
+          saved === "en" || saved === "ru"
+            ? saved
+            : (navigator.language || "").toLowerCase().indexOf("en") === 0
+              ? "en"
+              : "ru";
+        document.documentElement.lang = lang;
+        document.documentElement.dataset.lang = lang;
+      })();
+    </script>
+  </head>
+  <body class="page-legal">
+    <a class="skip-link" href="#content" data-i18n="nav.skip">К содержанию</a>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand-mark" href="index.html" aria-label="EchoDub" data-i18n-aria="nav.home">
+        <img src="assets/favicon-128.png" alt="" width="28" height="28" />
+        <span>EchoDub</span>
+      </a>
+      <div class="header-right">
+        <nav class="nav">
+          <a href="index.html#problem" data-i18n="nav.problem">Проблема</a>
+          <a href="index.html#product" data-i18n="nav.product">Продукт</a>
+          <a href="support.html" data-i18n="support.nav">Поддержка</a>
+          <a class="nav-cta" href="index.html#invest" data-i18n="nav.cta">Написать</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Язык" data-i18n-aria="nav.lang">
+          <button type="button" data-set-lang="ru">RU</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="content" class="legal-main">
+      <article class="legal-article">
+        <p class="legal-eyebrow" data-i18n="privacy.eyebrow">Документы</p>
+        <h1 data-i18n="privacy.h1">Политика конфиденциальности EchoDub</h1>
+        <p class="legal-updated" data-i18n="privacy.updated">Обновлено: 22 сентября 2026</p>
+
+        <p data-i18n="privacy.intro">
+          EchoDub — iOS-приложение для дубля. В текущем MVP нет аккаунтов, рекламы и продуктовой аналитики.
+        </p>
+
+        <h2 data-i18n="privacy.h2.device">Данные на устройстве</h2>
+        <ul>
+          <li data-i18n="privacy.li1">
+            Сценарии, которые вы вставляете, дубли, которые записываете, и экспортированный m4a остаются на iPhone, пока вы сами ими не поделитесь.
+          </li>
+          <li data-i18n="privacy.li2">
+            Микрофон нужен только чтобы записать дубль. Распознавание речи, если вы его разрешите, помогает следить за фразой.
+          </li>
+          <li data-i18n="privacy.li3">Нет аккаунта EchoDub и нет облачной библиотеки ваших роликов.</li>
+        </ul>
+
+        <h2 data-i18n="privacy.h2.neural">Нейроголос</h2>
+        <p data-i18n="privacy.neural">
+          Если выбран нейродиктор, текущая фраза уходит в Microsoft Edge TTS, чтобы проиграть нейродубль. Apple Speech работает локально и включается как запасной / офлайн-голос. Копию этого аудио мы не получаем.
+        </p>
+
+        <p data-i18n="privacy.ads">Нет сторонней рекламы. Персональные данные не продаём.</p>
+
+        <h2 data-i18n="privacy.h2.site">Сайт и форма поддержки</h2>
+        <p data-i18n="privacy.site">
+          Если вы отправляете заявку со страницы поддержки, мы получаем имя, почту, тему и текст
+          сообщения, чтобы ответить. Эти данные не используем для рекламы и не продаём.
+        </p>
+
+        <h2 data-i18n="privacy.h2.contact">Контакты</h2>
+        <p>
+          <span data-i18n="privacy.contact">По вопросам конфиденциальности:</span>
+          <a href="mailto:ilyandreev771@gmail.com">ilyandreev771@gmail.com</a>
+        </p>
+
+        <h2 data-i18n="privacy.h2.changes">Изменения</h2>
+        <p>
+          <span data-i18n="privacy.changes">Политику можем обновить; актуальная версия будет по этому адресу:</span>
+          <a href="https://ilyagaltsev.github.io/EchoDub-preview/privacy.html"
+            >ilyagaltsev.github.io/EchoDub-preview/privacy.html</a
+          >.
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 EchoDub</span>
+      <span
+        ><a href="support.html" data-i18n="footer.support">Поддержка</a>
+        ·
+        <a href="privacy.html" data-i18n="footer.privacy">Конфиденциальность</a>
+        ·
+        <span data-i18n="footer.made">Сделано в</span>
+        <a
+          href="https://however-digital.tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          >however-digital.tech</a
+        ></span
+      >
+    </footer>
+    <script src="script.js?v=6"></script>
+  </body>
+</html>

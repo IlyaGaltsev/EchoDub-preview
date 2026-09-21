@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EchoDub — английская озвучка твоим голосом</title>
+    <meta
+      name="description"
+      content="EchoDub — iOS-цикл для авторов, которые озвучивают ролики по-английски. Слушаешь нейрофразу, повторяешь своим голосом, экспортируешь дорожку."
+    />
+    <meta property="og:title" content="EchoDub" />
+    <meta
+      property="og:description"
+      content="Английская озвучка. Твоим голосом. Слушай, повтори, экспортируй."
+    />
+    <meta
+      property="og:image"
+      content="https://ilyagaltsev.github.io/EchoDub-preview/assets/og.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://ilyagaltsev.github.io/EchoDub-preview/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/favicon-128.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=4" />
+    <script>
+      (function () {
+        var saved = localStorage.getItem("echodub-lang");
+        var lang =
+          saved === "en" || saved === "ru"
+            ? saved
+            : (navigator.language || "").toLowerCase().indexOf("en") === 0
+              ? "en"
+              : "ru";
+        document.documentElement.lang = lang;
+        document.documentElement.dataset.lang = lang;
+      })();
+    </script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#content" data-i18n="nav.skip">К содержанию</a>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand-mark" href="#top" aria-label="EchoDub" data-i18n-aria="nav.home">
+        <img src="assets/favicon-128.png" alt="" width="28" height="28" />
+        <span>EchoDub</span>
+      </a>
+      <div class="header-right">
+        <nav class="nav">
+          <a href="#problem" data-i18n="nav.problem">Проблема</a>
+          <a href="#product" data-i18n="nav.product">Продукт</a>
+          <a href="#status" data-i18n="nav.status">Статус</a>
+          <a class="nav-cta" href="#invest" data-i18n="nav.cta">Написать</a>
+        </nav>
+        <div class="lang-switch" role="group" aria-label="Язык" data-i18n-aria="nav.lang">
+          <button type="button" data-set-lang="ru">RU</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">iOS · инструменты для авторов · MVP</p>
+          <p class="brand-hero">EchoDub</p>
+          <h1 data-i18n="hero.h1">Английская озвучка. Твоим голосом.</h1>
+          <p class="lede" data-i18n="hero.lede">
+            Вставь переведённый сценарий. Нейродиктор читает каждую фразу. Ты
+            повторяешь — как в Duolingo, только для монтажа, не для стрика.
+          </p>
+          <div class="cta-row">
+            <a
+              class="btn btn-primary"
+              data-i18n="hero.cta"
+              data-i18n-href="hero.mail"
+              href="mailto:ilyandreev771@gmail.com?subject=EchoDub%20%E2%80%94%20%D0%B4%D0%B5%D0%BC%D0%BE"
+              >Показать продукт</a
+            >
+            <a class="btn btn-ghost" href="#demo" data-i18n="hero.loop">Смотреть цикл</a>
+          </div>
+          <p class="meta" data-i18n="hero.meta">Рабочий MVP на iOS 17+ · Microsoft Neural + Apple Speech</p>
+        </div>
+
+        <div class="hero-stage">
+          <figure class="phone" id="demo">
+            <div class="phone-screen">
+              <video
+                class="demo-video"
+                data-demo-video
+                poster="assets/demo-poster.jpg"
+                width="540"
+                height="1174"
+                playsinline
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/demo.mp4" type="video/mp4" />
+              </video>
+              <div class="video-bar">
+                <button
+                  type="button"
+                  class="video-btn"
+                  data-video-toggle
+                  data-i18n-aria="demo.pause"
+                  aria-label="Пауза"
+                >
+                  Пауза
+                </button>
+                <button
+                  type="button"
+                  class="video-btn"
+                  data-video-sound
+                  data-i18n-aria="demo.unmute"
+                  aria-label="Включить звук"
+                  aria-pressed="false"
+                >
+                  Звук
+                </button>
+              </div>
+            </div>
+            <figcaption class="demo-hint" data-i18n="demo.hint">Запись с iPhone — тот же цикл дубля.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="how" id="how">
+        <div class="section-intro">
+          <h2 data-i18n="how.h2">Четыре такта. Один экспорт.</h2>
+          <p data-i18n="how.p">
+            Дубль — это не абзац. EchoDub режет английский сценарий на фразы и
+            проводит автора по каждой.
+          </p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>01</span>
+            <h3 data-i18n="how.1.h">Вставить</h3>
+            <p data-i18n="how.1.p">Кидаешь английский перевод сценария. Выбираешь нейроактёра и более медленный темп для повтора.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3 data-i18n="how.2.h">Слушать</h3>
+            <p data-i18n="how.2.p">Диктор читает строку. Караоке идёт за голосом — ударение и ритм видно, а не угадываешь.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3 data-i18n="how.3.h">Повторить</h3>
+            <p data-i18n="how.3.p">Пишешь свой дубль. Слушаешь себя, слушаешь диктора или берёшь ещё дубль. Лишнее пропускаешь.</p>
+          </li>
+          <li>
+            <span>04</span>
+            <h3 data-i18n="how.4.h">Экспорт</h3>
+            <p data-i18n="how.4.p">Склеиваешь записанные фразы в m4a и кидаешь на ролик. Пропущенные строки в файл не попадут.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="problem" id="problem">
+        <div class="section-intro">
+          <h2 data-i18n="problem.h2">Перевод уже решён. Голос — нет.</h2>
+          <p data-i18n="problem.p">
+            Автор без английского получает сценарий за секунды. А сказать его —
+            не как нейросеть и не нанимая носителя на каждый ролик — до сих пор
+            узкое место.
+          </p>
+        </div>
+        <ul class="split-list">
+          <li>
+            <h3 data-i18n="problem.1.h">TTS на таймлайне</h3>
+            <p data-i18n="problem.1.p">Быстро, дёшево и сразу слышно, что это синтетика. Аудитория отваливается. На флагманский ролик такое не ставят.</p>
+          </li>
+          <li>
+            <h3 data-i18n="problem.2.h">Нанять актёра</h3>
+            <p data-i18n="problem.2.p">Звучит хорошо. Не масштабируется на ежедневный YouTube или Reels — и это уже не голос автора.</p>
+          </li>
+          <li>
+            <h3 data-i18n="problem.3.h">Читать с листа</h3>
+            <p data-i18n="problem.3.p">Английский с телесуфлёра без тренера выходит деревянным: не те ударения, не та мелодия.</p>
+          </li>
+          <li>
+            <h3 data-i18n="problem.4.h">Языковые приложения</h3>
+            <p data-i18n="problem.4.p">Duolingo научит «the apple is red». Стебель для Premiere он не отдаст.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="product" id="product">
+        <div class="section-intro">
+          <h2 data-i18n="product.h2">Репетиционная будка, а не очередной TTS-сайт.</h2>
+          <p data-i18n="product.p">
+            EchoDub стоит между «есть английский сценарий» и «есть человеческая
+            озвучка». Интерфейс — на русском. Дубль — на английском. В этом клин.
+          </p>
+        </div>
+        <ul class="feature-list">
+          <li>
+            <h3 data-i18n="product.1.h">Нейродиктор без ключа</h3>
+            <p data-i18n="product.1.p">
+              Microsoft Edge TTS — Jenny, Guy, Aria, Ryan, Sonia — тот же класс
+              голосов, что на TextaVoice, внутри нативного iOS-цикла. Если сеть
+              падает, включается Apple Speech.
+            </p>
+          </li>
+          <li>
+            <h3 data-i18n="product.2.h">Караоке по строке</h3>
+            <p data-i18n="product.2.p">
+              Слова загораются вместе с диктором, потом ждут дубль. Автор слышит,
+              куда падает ударение, до того как открыть рот.
+            </p>
+          </li>
+          <li>
+            <h3 data-i18n="product.3.h">Собрано под дубль</h3>
+            <p data-i18n="product.3.p">
+              Перезапись, пропуск, назад, послушать себя. В файл попадает только
+              записанное. Нужен файл, а не стрик.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="compare" id="compare">
+        <div class="section-intro">
+          <h2 data-i18n="compare.h2">Почему это, а не то.</h2>
+          <p data-i18n="compare.p">Не курс языка. Не сайт, который читает текст вслух.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col"><span class="visually-hidden" data-i18n="compare.col.metric">Критерий</span></th>
+                <th scope="col">EchoDub</th>
+                <th scope="col">TTS / TextaVoice</th>
+                <th scope="col" data-i18n="compare.col.duo">Duolingo и аналоги</th>
+                <th scope="col" data-i18n="compare.col.va">Актёр озвучки</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" data-i18n="compare.r1.h">Твой голос в ролике</th>
+                <td data-i18n="compare.yes">Да</td>
+                <td data-i18n="compare.no">Нет</td>
+                <td data-i18n="compare.no">Нет</td>
+                <td data-i18n="compare.r1.va">Чужой</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="compare.r2.h">Тренер по фразам</th>
+                <td data-i18n="compare.yes">Да</td>
+                <td data-i18n="compare.no">Нет</td>
+                <td data-i18n="compare.r2.duo">Да, для слов</td>
+                <td data-i18n="compare.r2.va">Студийное время</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="compare.r3.h">Экспорт в монтаж</th>
+                <td>m4a</td>
+                <td data-i18n="compare.r3.tts">Аудиофайл</td>
+                <td data-i18n="compare.no">Нет</td>
+                <td data-i18n="compare.r3.va">Да, медленно</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="compare.r4.h">Цена за ролик</th>
+                <td data-i18n="compare.r4.app">Приложение</td>
+                <td data-i18n="compare.r4.tts">Бесплатно / кредиты</td>
+                <td data-i18n="compare.r4.duo">Подписка</td>
+                <td data-i18n="compare.r4.va">За дубль</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="compare.r5.h">Нативный цикл на iOS</th>
+                <td data-i18n="compare.yes">Да</td>
+                <td data-i18n="compare.r5.tts">Браузер</td>
+                <td data-i18n="compare.yes">Да</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="status" id="status">
+        <div class="status-grid">
+          <div>
+            <p class="eyebrow" data-i18n="status.eyebrow">Что уже есть</p>
+            <h2 data-i18n="status.h2">Живой MVP. Не Figma.</h2>
+            <p data-i18n="status.p">
+              iOS-приложение работает сегодня: сценарий, нарезка фраз, нейроголос,
+              микрофон, перезаписи, m4a на выходе. Эта страница — превью для
+              инвесторов. Дальше — TestFlight и App Store.
+            </p>
+          </div>
+          <ul class="built">
+            <li data-i18n="status.1">SwiftUI-приложение на iOS 17+</li>
+            <li data-i18n="status.2">Нарезка текста на рабочие фразы</li>
+            <li data-i18n="status.3">Голоса Edge TTS и запасной Apple Speech</li>
+            <li data-i18n="status.4">Микрофон и распознавание речи на устройстве</li>
+            <li data-i18n="status.5">Караоке, пока читает диктор</li>
+            <li data-i18n="status.6">Один m4a из записанных фраз</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="invest" id="invest">
+        <div class="invest-inner">
+          <img class="download-icon" src="assets/icon.png" alt="" width="88" height="88" />
+          <h2 data-i18n="invest.h2">Пройдём дубль вместе.</h2>
+          <p data-i18n="invest.p">
+            Если вам интересны инструменты для авторов или английский инвентарь
+            от неанглоязычных талантов — покажем продукт вживую и поговорим, что
+            уходит в следующий релиз.
+          </p>
+          <a
+            class="btn btn-primary btn-lg"
+            data-i18n="invest.cta"
+            data-i18n-href="hero.mail"
+            href="mailto:ilyandreev771@gmail.com?subject=EchoDub%20%E2%80%94%20%D0%B4%D0%B5%D0%BC%D0%BE"
+            >Написать письмо</a
+          >
+          <p class="meta">ilyandreev771@gmail.com · however-digital.tech</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 EchoDub</span>
+      <span
+        ><a href="support.html" data-i18n="footer.support">Поддержка</a>
+        ·
+        <a href="privacy.html" data-i18n="footer.privacy">Конфиденциальность</a>
+        ·
+        <span data-i18n="footer.made">Сделано в</span>
+        <a
+          href="https://however-digital.tech"
+          target="_blank"
+          rel="noopener noreferrer"
+          >however-digital.tech</a
+        ></span
+      >
+    </footer>
+
+    <script src="script.js?v=4"></script>
+  </body>
+</html>
