@@ -20,7 +20,7 @@
 
 Paste a translated English script. A neural coach reads each phrase. You repeat it, retake if needed, and export an `m4a` for the edit.
 
-This repo is the **investor preview** for GitHub Pages — not the iOS source.
+This repo is the **product landing** for GitHub Pages — not the iOS source.
 
 ## GitHub Pages
 
@@ -32,4 +32,4 @@ This repo is the **investor preview** for GitHub Pages — not the iOS source.
 ## License
 
 Copyright © 2026 EchoDub. All rights reserved.  
-Developed by <a href="https://however-digital.tech" target="_blank" rel="noopener noreferrer">however-digital.tech</a>.
+Developed by <a href="https://however-digital.fyi" target="_blank" rel="noopener noreferrer">however-digital.fyi</a>.
